@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid'
 
+import Form from './components/Form'
 import Title from './components/Title'
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
               <Title />
             </Grid>
             <Grid item xs={7} className='information-container'>
+              <Form />
             </Grid>
           </Grid>
         </div>
