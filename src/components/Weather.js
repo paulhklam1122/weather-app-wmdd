@@ -2,27 +2,48 @@ import React from 'react'
 
 const Weather = (props) => (
   <div className='weather__info'>
-    <p className='weather__key'>
-      Location: <span>Vancouver, Canada</span>
-    </p>
-    <p className='weather__key'>
-      Temperature: 23&deg;C
-    </p>
-    <p className='weather__key'>
-      Conditions: Some description
-    </p>
-    <p className='weather__key'>
-      Humidity: 60%
-    </p>
-    <p className='weather__key'>
-      Minimum Temperature: 16&deg;C
-    </p>
-    <p className='weather__key'>
-      Maximum Temperature: 25&deg;C
-    </p>
-    <p className='weather__key'>
-      Error: Sample Error
-    </p>
+    {
+      props.city && props.country &&
+      <p className='weather__key'>
+        Location: <span>{props.city}, {props.country}</span>
+      </p>
+    }
+    {
+      props.temperature &&
+      <p className='weather__key'>
+        Temperature: {props.temperature}&deg;C
+      </p>
+    }
+    {
+      props.description &&
+      <p className='weather__key'>
+        Conditions: {props.description}
+      </p>
+    }
+    {
+      props.humidity &&
+      <p className='weather__key'>
+        Humidity: {props.humidity}
+      </p>
+    }
+    {
+      props.minTemp &&
+      <p className='weather__key'>
+        Minimum Temperature: {props.minTemp}
+      </p>
+    }
+    {
+      props.maxTemp &&
+      <p className='weather__key'>
+        Maximum Temperature: {props.maxTemp}
+      </p>
+    }
+    {
+      props.error &&
+      <p className='weather__key'>
+        Error: {props.error}
+      </p>
+    }
   </div>
 )
 
