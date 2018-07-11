@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid'
 
 import Form from './components/Form'
 import Title from './components/Title'
+import Weather from './components/Weather'
 
 class App extends Component {
   render () {
@@ -15,6 +16,7 @@ class App extends Component {
             </Grid>
             <Grid item xs={7} className='information-container'>
               <Form />
+              <Weather />
             </Grid>
           </Grid>
         </div>
